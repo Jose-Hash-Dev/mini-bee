@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #3b2f2a;
+  --color-muted: #5e4a3e;
+  --color-honey: #ffb000;
+  --color-butter: #ffd27a;
+  --color-cream: #fff4dc;
+  --color-line: #efe4d2;
+  --color-rainbow-red: #ff5a36;
+  --color-rainbow-green: #22b573;
+  --color-rainbow-blue: #1e9bff;
+  --color-rainbow-violet: #9b51e0;
+
+  --font-sans: var(--font-nunito), system-ui, sans-serif;
+  --font-display: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+}
+
+html {
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-rainbow-blue);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Hide the scrollbar on the swipe gallery while keeping it scrollable */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
